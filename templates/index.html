@@ -1,0 +1,227 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+<style>
+    .carousel-caption {
+        position: absolute;
+        top: 52%;
+        left: 10%;
+        height: 200px;
+        width: 550px;
+        transform: translateY(-50%);
+        color: white;
+        text-align: left;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .carousel-caption h2 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .carousel-caption p {
+        font-size: 1.2rem;
+        margin-top: 10px;
+    }
+
+    .divider {
+        margin-left: 30%;
+        width: 40%;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .divider::before,
+    .divider::after {
+        flex: 1;
+        content: '';
+        padding: 2px;
+        background-color: #25826a;
+        margin: 5px;
+    }
+</style>
+<!-- Slider -->
+<div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{% static 'images/banner1.jpg' %}" style="width: 100%; margin: auto;" alt="Servotech Image">
+            <div class="carousel-caption text-left">
+                <h2>It Just Got Easier and Even More Convenient</h2>
+                <p>Easily accessible for every Pakistani, our mobile application, ePay, call center, and policyholder
+                    services center give you access at your fingertips!</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/banner2.jpg' %}" style="width: 100%; margin: auto;" alt="Servotech Image">
+            <div class="carousel-caption text-left">
+                <h2>Protect your Health</h2>
+                <p>Whether it's covering medical expenses, emergencies, or ensuring access to quality care, we've got
+                    you covered. Say hello to a healthier, happier family!</p>
+            </div>
+        </div>
+        <div class="carousel-item active">
+            <img src="{% static 'images/banner3.jpg' %}" style="width: 100%; margin: auto;" alt="Servotech Image">
+            <div class="carousel-caption text-left">
+                <h2>Empower your Life</h2>
+                <p>Seize the moments that make life worth it. State Life Insurance Policies can help give you the
+                    confidence to embrace every opportunity to live each day to the fullest.</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<!-- cards -->
+<div class="container my-5">
+    <div class="row">
+        <!-- Card 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{% static 'images/card1.jpg' %}" class="card-img-top" alt="Image 1">
+                <div class="card-body">
+                    <h5 class="card-title">Digital insurance</h5>
+                    <p class="card-text">Digital insurance streamlines policy management through seamless online
+                        platforms.</p>
+                    <button class="btn btn-success px-4 py-2" type="submit">View more</button>
+                </div>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{% static 'images/card2.jpg' %}" class="card-img-top" alt="Image 2">
+                <div class="card-body">
+                    <h5 class="card-title">Alpha insurance</h5>
+                    <p class="card-text">Alpha Insurance offers reliable coverage tailored to your needs and make up the
+                        bulk of the card's content.</p>
+                    </p>
+                    <button class="btn btn-success px-4 py-2" type="submit">View more</button>
+                </div>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{% static 'images/card3.jpg' %}" class="card-img-top" alt="Image 3">
+                <div class="card-body">
+                    <h5 class="card-title">Gulfa Product</h5>
+                    <p class="card-text">Gulfa Product delivers quality and innovation in every offering and make up the
+                        bulk of the card's content.</p>
+                    <button class="btn btn-success px-4 py-2" type="submit">View more</button>
+                </div>
+            </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{% static 'images/card9.png' %}" class="card-img-top" alt="Image 1">
+                <div class="card-body">
+                    <h5 class="card-title">protect your employee</h5>
+                    <p class="card-text">Protect your employees with comprehensive insurance and safety solutions and
+                        make up the bulk of the card's content.</p>
+                    <button class="btn btn-success px-4 py-2" type="submit">View more</button>
+
+                </div>
+            </div>
+        </div>
+        <!-- Card 5-->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{% static 'images/card4.jpg' %}" class="card-img-top" alt="Image 2">
+                <div class="card-body">
+                    <h5 class="card-title">Wealth management</h5>
+                    <p class="card-text">Wealth management ensures your financial growth and security and safety of the
+                        card's content.</p>
+                    </p>
+                    <button class="btn btn-success px-4 py-2" type="submit">View more</button>
+
+                </div>
+            </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{% static 'images/card6.jpg' %}" class="card-img-top" alt="Image 3">
+                <div class="card-body">
+                    <h5 class="card-title">Insurance through bank </h5>
+                    <p class="card-text">
+                        Banking institutions offer insurance products for comprehensive financial protection and peace
+                        of the card's content.</p>
+                    <button class="btn btn-success px-4 py-2" type="submit">View more</button>
+                </div>
+            </div>
+        </div>
+        <!-- title pargraph -->
+        <div class="px-4 py-5 my-5 text-center">
+            <div class="divider">Explore Our Insurance</div>
+            <h1 class="display-5 fw-bold text-body-emphasis">Explore our range of Insurance Products</h1>
+            <div class="col-lg-8 mx-auto">
+                <p class="lead mb-4">Discover our diverse range of insurance products designed to meet your unique
+                    needs. Whether you’re looking for comprehensive coverage or tailored solutions, we have options to
+                    fit every requirement. Our goal is to support your aspirations and provide peace of mind. Let us
+                    help you protect what matters most.</p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <button type="button" class="btn btn-success btn-lg px-4 gap-3">Primary button</button>
+                </div>
+            </div>
+        </div>
+        <!-- section -->
+        <div class="row featurette mb-5">
+            <div class="col-md-6 pt-4">
+                <h5>Leading the Way in Life</h5>
+                <h1 class="featurette-heading fw-normal lh-1">Pakistan's Largest Life & Health Insurer.</h1>
+                <p class="lead">We are continuously adapting to meet evolving client demands. With Shoaib Javed Hussain
+                    at the helm, the corporation has achieved marking a substantial 37% increase from the previous year,
+                    highlighting our strong revenue generation capabilities protection through insurance and financial
+                    solutions developed for the best advantage of the community leading to a resilient and prosperous
+                    Pakistan..</p>
+                <button class="btn btn-success px-4 py-2" type="submit">View more</button>
+            </div>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-5">
+                <img src="{% static 'images/left3.jpg' %}" class="card-img-top shadow-lg bg-white rounded" width="530"
+                    height="450" alt="Image 3">
+            </div>
+        </div>
+        <!-- section2 -->
+        <div class="row featurette mt-5">
+            <div class="col-md-5">
+                <img src="{% static 'images/right.jpg' %}" class="card-img-top shadow-lg bg-white rounded" width="530"
+                    height="450" alt="Image 3">
+            </div>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-6 pt-4">
+                <h5>Get Yours Today</h5>
+                <h1 class="featurette-heading fw-normal lh-1">Save 50% on your life insurance policy</h1>
+                <p class="lead">Insurigo agency is a business or organization that acts as an intermediary between
+                    insurance providers (insurance companies) and individuals or businesses seeking insurance coverage.
+                    These agencies play a crucial role in the insurance industry by helping customers find suitable
+                    insurance policies to protect themselves or their assets against various risks, such as accidents,
+                    illness, property damage, liability, and more.
+                    ..</p>
+                <button class="btn btn-success px-4 py-2" type="submit">View more</button>
+            </div>
+        </div>
+        {% endblock body %}

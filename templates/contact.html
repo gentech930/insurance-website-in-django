@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Contact{% endblock title %}
+{% block body %}
+<style>
+    .hero-section {
+        background: linear-gradient(to right, #004d40 35%, rgba(0, 0, 0, 0.3) 100%),
+        url("{% static 'images/contact.jpg' %}");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 60px 20px;
+        height: 400px;
+    }
+    .contact {
+        height: 200px;
+        width: 700px;
+        padding-left: 40px;
+    }
+</style>
+<section class="hero-section">
+    <div class="contact pt-5 pb-5">
+        <h1><b>Conatct Us</b></h1>
+        <p style="font-size: 20px;">Need any type of insurance policies over the world you can contact us without any
+            hesitation. Our expert support team with help you..</p>
+        <button class="btn btn-outline-success px-4 py-2 text-white" type="submit">View more</button>
+    </div>
+</section>
+{% if messages %}
+<div class="container mt-3">
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}">
+        {{ message }}
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+<div class="contact1">
+    <!-- Forms  -->
+    <div class="row">
+        <div class="col col-8 offset-2">
+            <h3 class="alert alert-warning text-center">Contact Us</h3>
+            <form method="post">
+                {% csrf_token %}
+                {{form.as_p}}
+
+                <input type="submit" style="margin-left: 45%;" value="Submit" class="btn btn-success">
+            </form>
+        </div>
+    </div>
+    {% endblock body %}
